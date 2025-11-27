@@ -1,0 +1,873 @@
+
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <title>OpenHarmony XTS 测试报告</title>
+        <style>
+            body { font-family: Arial, sans-serif; background-color: #f4f4f9; margin: 20px; }
+            h1 { color: #333; text-align: center; }
+            .summary { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); margin-bottom: 20px; }
+            .pass { color: green; font-weight: bold; }
+            .fail { color: red; font-weight: bold; }
+            table { width: 100%; border-collapse: collapse; background: #fff; }
+            th, td { padding: 12px; border: 1px solid #ddd; text-align: left; }
+            th { background-color: #007bff; color: white; }
+            tr:nth-child(even) { background-color: #f9f9f9; }
+            .log-box { display: none; background: #333; color: #0f0; padding: 10px; font-family: monospace; font-size: 12px; white-space: pre-wrap; margin-top: 5px; border-radius: 4px; }
+            button { cursor: pointer; background: #eee; border: 1px solid #ccc; padding: 5px 10px; border-radius: 4px; }
+        </style>
+        <script>
+            function toggleLog(id) {
+                var x = document.getElementById(id);
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>OpenHarmony XTS 自动化测试报告</h1>
+    
+    <div class="summary">
+        <h2>测试汇总</h2>
+        <p><strong>执行时间:</strong> 2025-11-27 18:40:37</p>
+        <p><strong>耗时:</strong> 0:00:25.017517</p>
+        <p><strong>总用例数:</strong> 10</p>
+        <p><span class="pass">成功: 10</span> | <span class="fail">失败: 0</span></p>
+        <p><strong>通过率:</strong> 100.00%</p>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>序号</th>
+                <th>脚本名称</th>
+                <th>结果</th>
+                <th>耗时</th>
+                <th>详细日志</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        <tr>
+            <td>1</td>
+            <td>testBundleManagerHelp.py</td>
+            <td class="pass">PASS</td>
+            <td>0.30s</td>
+            <td>
+                <button onclick="toggleLog('log_0')">查看日志</button>
+                <div id="log_0" class="log-box">[STEP] Setup
+[STEP] Process
+[DEVICE:device1] ִʵ: bm help
+[INFO] bm help output: usage: bm <command> <options>
+These are common bm commands list:
+  help         list available commands
+  install      install a bundle with options
+  uninstall    uninstall a bundle with options
+  dump         dump the bundle info
+  get          obtain device udid
+  quickfix     quick fix, including query and install
+  compile      Compile the software package
+  copy-ap      Copy software ap file to /data/local/pgo
+  dump-overlay dump overlay info of the specific overlay bundle
+  dump-target-overlay dump overlay info of the specific target bundle
+  dump-dependencies dump dependencies by given bundle name and module name
+  dump-shared dump inter-application shared library information by bundle name
+  enable       enable the bundle
+  disable      disable the bundle
+  clean        clean the bundle data
+[STEP] Teardown
+
+</div>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>testInitCfgJsonSyntax.py</td>
+            <td class="pass">PASS</td>
+            <td>10.82s</td>
+            <td>
+                <button onclick="toggleLog('log_1')">查看日志</button>
+                <div id="log_1" class="log-box">[STEP] Setup
+[STEP] Process
+[DEVICE:device1] ִʵ: ls /system/etc/init
+[DEVICE:device1] ִʵ: cat /system/etc/init/access_token.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/accessibility.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/accountmgr.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/app_domain_verify_agent.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/app_fwk_update_service.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/appspawn.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/asset_service.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/audio_policy.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/audio_server.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/av_codec_service.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/avsession_service.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/backup.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/bgtaskmgr_service.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/bluetooth_service.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/cadaemon.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/camera_service.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/cast_engine_service.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/cert_manager_service.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/check_module_update.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/cjappspawn.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/compiler_service.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/concurrent_task_service.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/console.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/cups_service.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/daudio.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/dcamera.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/devattest_service.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/device_manager.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/device_usage_statistics_service.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/deviceauth_service.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/deviceinfoservice.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/deviceprofile.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/dhardware.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/dinput.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/distributed_data.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/distributedbms.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/distributedfile.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/distributedsched.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/dlp_permission_service.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/downloadservice.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/drm_service.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/dscreen.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/dslm_service.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/edm.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/el5_filekey_manager.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/faultloggerd.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/file_access_service.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/foundation.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/graphic.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/hdcd.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/hdf_ext_devmgr.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/hidumper_service.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/hilogd.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/hiperf.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/hiprofiler_daemon.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/hiprofiler_plugins.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/hiprofilerd.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/hitrace.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/hiview.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/huks_service.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/i18n_service.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/init.reboot.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/inputmethodservice.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/installs.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/intell_voice_service.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/key_enable.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/local_code_sign.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/locationsa.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/mdnsmanager.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/media_monitor.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/media_service.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/memmgrservice.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/module_update_sa.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/msdp_musl.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/multimodalinput.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/nativespawn.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/netmanager_base.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/netsysnative.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/oaidservice.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/param_watcher.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/pasteboardservice.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/pinauth_sa_profile.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/powermgr.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/printservice.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/privacy.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/pulseaudio.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/quick_fix.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/resource_schedule_executor.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/resource_schedule_service.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/samgr_standard.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/sandbox_manager_service.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/scanservice.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/screenlock.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/security_collector.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/security_component_service.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/security_guard.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/sensors_musl.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/sharing_service.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/softbus_server_musl.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/srms.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/storage_daemon.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/storage_manager.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/sys_installer_sa.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/teecd.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/telephony.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/testserver.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/timeservice.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/tlogcat.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/token_sync.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/ubsan.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/ueventd.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/ui_service.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/updater_normal.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/updater_sa.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/usb_service.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/useriam.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/wallpaperservice.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/watchdog.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/wifi_hal_service.cfg
+[DEVICE:device1] ִʵ: cat /system/etc/init/wifi_standard.cfg
+[STEP] Teardown
+
+</div>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>testInitServicesMetaCheck.py</td>
+            <td class="pass">PASS</td>
+            <td>10.72s</td>
+            <td>
+                <button onclick="toggleLog('log_2')">查看日志</button>
+                <div id="log_2" class="log-box">[STEP] Setup
+[STEP] Process
+[DEVICE:device1] ִʵ: ls /system/etc/init
+[CHECK] Checking access_token.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/access_token.cfg
+[WARNING] ©֮! ļ: access_token.cfg, : accesstoken_service ȱ 'apl' ֶ
+[CHECK] Checking accessibility.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/accessibility.cfg
+[WARNING] ©֮! ļ: accessibility.cfg, : accessibility ȱ 'apl' ֶ
+[CHECK] Checking accountmgr.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/accountmgr.cfg
+[WARNING] ©֮! ļ: accountmgr.cfg, : accountmgr ȱ 'apl' ֶ
+[CHECK] Checking app_domain_verify_agent.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/app_domain_verify_agent.cfg
+[WARNING] ©֮! ļ: app_domain_verify_agent.cfg, : app_domain_verify_agent ȱ 'apl' ֶ
+[CHECK] Checking app_fwk_update_service.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/app_fwk_update_service.cfg
+[WARNING] ©֮! ļ: app_fwk_update_service.cfg, : app_fwk_update_service ȱ 'apl' ֶ
+[CHECK] Checking appspawn.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/appspawn.cfg
+[WARNING] ©֮! ļ: appspawn.cfg, : appspawn ȱ 'apl' ֶ
+[CHECK] Checking asset_service.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/asset_service.cfg
+[WARNING] ©֮! ļ: asset_service.cfg, : asset_service ȱ 'apl' ֶ
+[CHECK] Checking audio_policy.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/audio_policy.cfg
+[CHECK] Checking audio_server.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/audio_server.cfg
+[WARNING] ©֮! ļ: audio_server.cfg, : audio_server ȱ 'apl' ֶ
+[CHECK] Checking av_codec_service.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/av_codec_service.cfg
+[WARNING] ©֮! ļ: av_codec_service.cfg, : av_codec_service ȱ 'apl' ֶ
+[CHECK] Checking avsession_service.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/avsession_service.cfg
+[CHECK] Checking backup.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/backup.cfg
+[WARNING] ©֮! ļ: backup.cfg, : backup_sa ȱ 'apl' ֶ
+[CHECK] Checking bgtaskmgr_service.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/bgtaskmgr_service.cfg
+[WARNING] ©֮! ļ: bgtaskmgr_service.cfg, : bgtaskmgr_service ȱ 'apl' ֶ
+[CHECK] Checking bluetooth_service.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/bluetooth_service.cfg
+[WARNING] ©֮! ļ: bluetooth_service.cfg, : bluetooth_service ȱ 'apl' ֶ
+[CHECK] Checking cadaemon.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/cadaemon.cfg
+[WARNING] ©֮! ļ: cadaemon.cfg, : cadaemon ȱ 'apl' ֶ
+[CHECK] Checking camera_service.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/camera_service.cfg
+[WARNING] ©֮! ļ: camera_service.cfg, : camera_service ȱ 'apl' ֶ
+[CHECK] Checking cast_engine_service.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/cast_engine_service.cfg
+[WARNING] ©֮! ļ: cast_engine_service.cfg, : cast_engine_service ȱ 'apl' ֶ
+[CHECK] Checking cert_manager_service.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/cert_manager_service.cfg
+[CHECK] Checking check_module_update.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/check_module_update.cfg
+[WARNING] ©֮! ļ: check_module_update.cfg, : check_module_update ȱ 'apl' ֶ
+[CHECK] Checking cjappspawn.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/cjappspawn.cfg
+[WARNING] ©֮! ļ: cjappspawn.cfg, : cjappspawn ȱ 'apl' ֶ
+[CHECK] Checking compiler_service.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/compiler_service.cfg
+[WARNING] ©֮! ļ: compiler_service.cfg, : compiler_service ȱ 'apl' ֶ
+[CHECK] Checking concurrent_task_service.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/concurrent_task_service.cfg
+[WARNING] ©֮! ļ: concurrent_task_service.cfg, : concurrent_task_service ȱ 'apl' ֶ
+[CHECK] Checking console.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/console.cfg
+[WARNING] ©֮! ļ: console.cfg, : console ȱ 'apl' ֶ
+[CHECK] Checking cups_service.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/cups_service.cfg
+[WARNING] ©֮! ļ: cups_service.cfg, : cupsd ȱ 'apl' ֶ
+[CHECK] Checking daudio.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/daudio.cfg
+[CHECK] Checking dcamera.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/dcamera.cfg
+[CHECK] Checking devattest_service.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/devattest_service.cfg
+[WARNING] ©֮! ļ: devattest_service.cfg, : devattest_service ȱ 'apl' ֶ
+[CHECK] Checking device_manager.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/device_manager.cfg
+[CHECK] Checking device_usage_statistics_service.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/device_usage_statistics_service.cfg
+[WARNING] ©֮! ļ: device_usage_statistics_service.cfg, : device_usage_stats_service ȱ 'apl' ֶ
+[CHECK] Checking deviceauth_service.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/deviceauth_service.cfg
+[WARNING] ©֮! ļ: deviceauth_service.cfg, : deviceauth_service ȱ 'apl' ֶ
+[CHECK] Checking deviceinfoservice.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/deviceinfoservice.cfg
+[WARNING] ©֮! ļ: deviceinfoservice.cfg, : deviceinfoservice ȱ 'apl' ֶ
+[CHECK] Checking deviceprofile.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/deviceprofile.cfg
+[WARNING] ©֮! ļ: deviceprofile.cfg, : deviceprofile ȱ 'apl' ֶ
+[CHECK] Checking dhardware.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/dhardware.cfg
+[CHECK] Checking dinput.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/dinput.cfg
+[CHECK] Checking distributed_data.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/distributed_data.cfg
+[CHECK] Checking distributedbms.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/distributedbms.cfg
+[WARNING] ©֮! ļ: distributedbms.cfg, : d-bms ȱ 'apl' ֶ
+[CHECK] Checking distributedfile.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/distributedfile.cfg
+[CHECK] Checking distributedsched.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/distributedsched.cfg
+[WARNING] ©֮! ļ: distributedsched.cfg, : distributedsched ȱ 'apl' ֶ
+[CHECK] Checking dlp_permission_service.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/dlp_permission_service.cfg
+[CHECK] Checking downloadservice.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/downloadservice.cfg
+[WARNING] ©֮! ļ: downloadservice.cfg, : download_server ȱ 'apl' ֶ
+[CHECK] Checking drm_service.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/drm_service.cfg
+[WARNING] ©֮! ļ: drm_service.cfg, : drm_service ȱ 'apl' ֶ
+[CHECK] Checking dscreen.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/dscreen.cfg
+[CHECK] Checking dslm_service.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/dslm_service.cfg
+[CHECK] Checking edm.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/edm.cfg
+[CHECK] Checking el5_filekey_manager.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/el5_filekey_manager.cfg
+[WARNING] ©֮! ļ: el5_filekey_manager.cfg, : el5_filekey_manager ȱ 'apl' ֶ
+[CHECK] Checking faultloggerd.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/faultloggerd.cfg
+[WARNING] ©֮! ļ: faultloggerd.cfg, : faultloggerd ȱ 'apl' ֶ
+[CHECK] Checking file_access_service.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/file_access_service.cfg
+[WARNING] ©֮! ļ: file_access_service.cfg, : file_access_service ȱ 'apl' ֶ
+[CHECK] Checking foundation.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/foundation.cfg
+[WARNING] ©֮! ļ: foundation.cfg, : foundation ȱ 'apl' ֶ
+[CHECK] Checking graphic.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/graphic.cfg
+[WARNING] ©֮! ļ: graphic.cfg, : render_service ȱ 'apl' ֶ
+[WARNING] ©֮! ļ: graphic.cfg, : bootanimation ȱ 'apl' ֶ
+[CHECK] Checking hdcd.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/hdcd.cfg
+[CHECK] Checking hdf_ext_devmgr.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/hdf_ext_devmgr.cfg
+[CHECK] Checking hidumper_service.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/hidumper_service.cfg
+[WARNING] ©֮! ļ: hidumper_service.cfg, : hidumper_service ȱ 'apl' ֶ
+[CHECK] Checking hilogd.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/hilogd.cfg
+[WARNING] ©֮! ļ: hilogd.cfg, : hilogd ȱ 'apl' ֶ
+[CHECK] Checking hiperf.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/hiperf.cfg
+[CHECK] Checking hiprofiler_daemon.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/hiprofiler_daemon.cfg
+[WARNING] ©֮! ļ: hiprofiler_daemon.cfg, : hiprofiler_daemon ȱ 'apl' ֶ
+[WARNING] ©֮! ļ: hiprofiler_daemon.cfg, : hiprofiler_daemon_sa ȱ 'apl' ֶ
+[CHECK] Checking hiprofiler_plugins.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/hiprofiler_plugins.cfg
+[CHECK] Checking hiprofilerd.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/hiprofilerd.cfg
+[WARNING] ©֮! ļ: hiprofilerd.cfg, : hiprofilerd ȱ 'apl' ֶ
+[CHECK] Checking hitrace.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/hitrace.cfg
+[CHECK] Checking hiview.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/hiview.cfg
+[CHECK] Checking huks_service.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/huks_service.cfg
+[WARNING] ©֮! ļ: huks_service.cfg, : huks_service ȱ 'apl' ֶ
+[CHECK] Checking i18n_service.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/i18n_service.cfg
+[WARNING] ©֮! ļ: i18n_service.cfg, : i18n_service ȱ 'apl' ֶ
+[CHECK] Checking init.reboot.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/init.reboot.cfg
+[CHECK] Checking inputmethodservice.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/inputmethodservice.cfg
+[WARNING] ©֮! ļ: inputmethodservice.cfg, : inputmethod_service ȱ 'apl' ֶ
+[CHECK] Checking installs.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/installs.cfg
+[WARNING] ©֮! ļ: installs.cfg, : installs ȱ 'apl' ֶ
+[CHECK] Checking intell_voice_service.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/intell_voice_service.cfg
+[WARNING] ©֮! ļ: intell_voice_service.cfg, : intell_voice_service ȱ 'apl' ֶ
+[CHECK] Checking key_enable.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/key_enable.cfg
+[WARNING] ©֮! ļ: key_enable.cfg, : key_enable ȱ 'apl' ֶ
+[CHECK] Checking local_code_sign.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/local_code_sign.cfg
+[CHECK] Checking locationsa.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/locationsa.cfg
+[WARNING] ©֮! ļ: locationsa.cfg, : locationhub ȱ 'apl' ֶ
+[CHECK] Checking mdnsmanager.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/mdnsmanager.cfg
+[WARNING] ©֮! ļ: mdnsmanager.cfg, : mdnsmanager ȱ 'apl' ֶ
+[CHECK] Checking media_monitor.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/media_monitor.cfg
+[CHECK] Checking media_service.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/media_service.cfg
+[WARNING] ©֮! ļ: media_service.cfg, : media_service ȱ 'apl' ֶ
+[CHECK] Checking memmgrservice.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/memmgrservice.cfg
+[CHECK] Checking module_update_sa.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/module_update_sa.cfg
+[WARNING] ©֮! ļ: module_update_sa.cfg, : module_update_sa ȱ 'apl' ֶ
+[CHECK] Checking msdp_musl.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/msdp_musl.cfg
+[WARNING] ©֮! ļ: msdp_musl.cfg, : msdp_sa ȱ 'apl' ֶ
+[CHECK] Checking multimodalinput.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/multimodalinput.cfg
+[WARNING] ©֮! ļ: multimodalinput.cfg, : multimodalinput ȱ 'apl' ֶ
+[WARNING] ©֮! ļ: multimodalinput.cfg, : mmi_uinput_service ȱ 'apl' ֶ
+[CHECK] Checking nativespawn.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/nativespawn.cfg
+[WARNING] ©֮! ļ: nativespawn.cfg, : nativespawn ȱ 'apl' ֶ
+[CHECK] Checking netmanager_base.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/netmanager_base.cfg
+[WARNING] ©֮! ļ: netmanager_base.cfg, : netmanager ȱ 'apl' ֶ
+[CHECK] Checking netsysnative.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/netsysnative.cfg
+[WARNING] ©֮! ļ: netsysnative.cfg, : netsysnative ȱ 'apl' ֶ
+[CHECK] Checking oaidservice.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/oaidservice.cfg
+[WARNING] ©֮! ļ: oaidservice.cfg, : oaid_service ȱ 'apl' ֶ
+[CHECK] Checking param_watcher.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/param_watcher.cfg
+[WARNING] ©֮! ļ: param_watcher.cfg, : param_watcher ȱ 'apl' ֶ
+[CHECK] Checking pasteboardservice.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/pasteboardservice.cfg
+[WARNING] ©֮! ļ: pasteboardservice.cfg, : pasteboard_service ȱ 'apl' ֶ
+[CHECK] Checking pinauth_sa_profile.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/pinauth_sa_profile.cfg
+[CHECK] Checking powermgr.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/powermgr.cfg
+[CHECK] Checking printservice.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/printservice.cfg
+[WARNING] ©֮! ļ: printservice.cfg, : print_service ȱ 'apl' ֶ
+[CHECK] Checking privacy.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/privacy.cfg
+[WARNING] ©֮! ļ: privacy.cfg, : privacy_service ȱ 'apl' ֶ
+[CHECK] Checking pulseaudio.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/pulseaudio.cfg
+[CHECK] Checking quick_fix.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/quick_fix.cfg
+[CHECK] Checking resource_schedule_executor.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/resource_schedule_executor.cfg
+[WARNING] ©֮! ļ: resource_schedule_executor.cfg, : resource_schedule_executor ȱ 'apl' ֶ
+[CHECK] Checking resource_schedule_service.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/resource_schedule_service.cfg
+[WARNING] ©֮! ļ: resource_schedule_service.cfg, : resource_schedule_service ȱ 'apl' ֶ
+[WARNING] ©֮! ļ: resource_schedule_service.cfg, : pin_auth_host ȱ 'apl' ֶ
+[CHECK] Checking samgr_standard.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/samgr_standard.cfg
+[WARNING] ©֮! ļ: samgr_standard.cfg, : samgr ȱ 'apl' ֶ
+[CHECK] Checking sandbox_manager_service.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/sandbox_manager_service.cfg
+[WARNING] ©֮! ļ: sandbox_manager_service.cfg, : sandbox_manager_service ȱ 'apl' ֶ
+[CHECK] Checking scanservice.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/scanservice.cfg
+[WARNING] ©֮! ļ: scanservice.cfg, : scan_service ȱ 'apl' ֶ
+[CHECK] Checking screenlock.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/screenlock.cfg
+[CHECK] Checking security_collector.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/security_collector.cfg
+[CHECK] Checking security_component_service.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/security_component_service.cfg
+[CHECK] Checking security_guard.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/security_guard.cfg
+[CHECK] Checking sensors_musl.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/sensors_musl.cfg
+[WARNING] ©֮! ļ: sensors_musl.cfg, : sensors ȱ 'apl' ֶ
+[CHECK] Checking sharing_service.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/sharing_service.cfg
+[CHECK] Checking softbus_server_musl.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/softbus_server_musl.cfg
+[WARNING] ©֮! ļ: softbus_server_musl.cfg, : softbus_server ȱ 'apl' ֶ
+[CHECK] Checking srms.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/srms.cfg
+[WARNING] ©֮! ļ: srms.cfg, : service_router ȱ 'apl' ֶ
+[CHECK] Checking storage_daemon.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/storage_daemon.cfg
+[WARNING] ©֮! ļ: storage_daemon.cfg, : storage_daemon ȱ 'apl' ֶ
+[CHECK] Checking storage_manager.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/storage_manager.cfg
+[CHECK] Checking sys_installer_sa.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/sys_installer_sa.cfg
+[WARNING] ©֮! ļ: sys_installer_sa.cfg, : sys_installer_sa ȱ 'apl' ֶ
+[CHECK] Checking teecd.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/teecd.cfg
+[WARNING] ©֮! ļ: teecd.cfg, : teecd ȱ 'apl' ֶ
+[CHECK] Checking telephony.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/telephony.cfg
+[WARNING] ©֮! ļ: telephony.cfg, : telephony_sa ȱ 'apl' ֶ
+[CHECK] Checking testserver.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/testserver.cfg
+[CHECK] Checking timeservice.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/timeservice.cfg
+[WARNING] ©֮! ļ: timeservice.cfg, : time_service ȱ 'apl' ֶ
+[CHECK] Checking tlogcat.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/tlogcat.cfg
+[WARNING] ©֮! ļ: tlogcat.cfg, : tlogcat ȱ 'apl' ֶ
+[CHECK] Checking token_sync.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/token_sync.cfg
+[WARNING] ©֮! ļ: token_sync.cfg, : token_sync_service ȱ 'apl' ֶ
+[CHECK] Checking ubsan.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/ubsan.cfg
+[CHECK] Checking ueventd.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/ueventd.cfg
+[WARNING] ©֮! ļ: ueventd.cfg, : ueventd ȱ 'apl' ֶ
+[CHECK] Checking ui_service.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/ui_service.cfg
+[CHECK] Checking updater_normal.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/updater_normal.cfg
+[WARNING] ©֮! ļ: updater_normal.cfg, : write_updater ȱ 'apl' ֶ
+[CHECK] Checking updater_sa.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/updater_sa.cfg
+[WARNING] ©֮! ļ: updater_sa.cfg, : updater_sa ȱ 'apl' ֶ
+[CHECK] Checking usb_service.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/usb_service.cfg
+[CHECK] Checking useriam.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/useriam.cfg
+[CHECK] Checking wallpaperservice.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/wallpaperservice.cfg
+[WARNING] ©֮! ļ: wallpaperservice.cfg, : wallpaper_service ȱ 'apl' ֶ
+[CHECK] Checking watchdog.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/watchdog.cfg
+[WARNING] ©֮! ļ: watchdog.cfg, : watchdog_service ȱ 'apl' ֶ
+[CHECK] Checking wifi_hal_service.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/wifi_hal_service.cfg
+[CHECK] Checking wifi_standard.cfg...
+[DEVICE:device1] ִʵ: cat /system/etc/init/wifi_standard.cfg
+
+[RESULT] ɨɡ 83 ȱ 'apl' ֶΡ
+[STEP] Teardown
+
+</div>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>testListDataDir.py</td>
+            <td class="pass">PASS</td>
+            <td>0.21s</td>
+            <td>
+                <button onclick="toggleLog('log_3')">查看日志</button>
+                <div id="log_3" class="log-box">[STEP] Setup
+[STEP] Process
+[DEVICE:device1] ִʵ: ls /data
+[INFO] ls /data output: app
+bluetooth
+chipset
+data
+local
+log
+misc
+module_update
+nfc
+power
+samgr
+service
+system
+update
+updater
+vendor
+[CHECK]  Ŀ¼ 'app' ڡ
+[CHECK]  Ŀ¼ 'log' ڡ
+[CHECK]  Ŀ¼ 'samgr' ڡ
+[CHECK]  Ŀ¼ 'service' ڡ
+[CHECK]  Ŀ¼ 'vendor' ڡ
+[SUCCESS] ļϵͳṹУͨ
+[STEP] Teardown
+
+</div>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>testPowerShellHelp.py</td>
+            <td class="pass">PASS</td>
+            <td>0.45s</td>
+            <td>
+                <button onclick="toggleLog('log_4')">查看日志</button>
+                <div id="log_4" class="log-box">[STEP] Setup
+[STEP] Process
+>>> [Step 1] ȡԴϵͳȫϢ...
+[DEVICE:device1] ִʵ: power-shell dump -a
+>>> [SUCCESS] ȡԴ״̬ɹ
+>>> [Step 2] ԶϢʱΪ 2  (120000ms)...
+[DEVICE:device1] ִʵ: power-shell timeout -o 120000
+[INFO] Set timeout result: Override screen off time to 120000
+>>> [INFO] : Override screen off time to 120000
+[STEP] Teardown
+
+</div>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>6</td>
+            <td>testPrintWorkingDirectory.py</td>
+            <td class="pass">PASS</td>
+            <td>0.53s</td>
+            <td>
+                <button onclick="toggleLog('log_5')">查看日志</button>
+                <div id="log_5" class="log-box">[STEP] Setup
+[STEP] Process
+>>> [Step 1] Դļ: /data/local/tmp/xts_test_file.txt
+[DEVICE:device1] ִʵ: touch /data/local/tmp/xts_test_file.txt
+>>> [Step 2] ֤ļǷ
+[DEVICE:device1] ִʵ: ls /data/local/tmp/xts_test_file.txt
+>>> [SUCCESS] ļɹ: /data/local/tmp/xts_test_file.txt
+>>> [Step 3] ֳ (ɾļ)
+[DEVICE:device1] ִʵ: rm /data/local/tmp/xts_test_file.txt
+[DEVICE:device1] ִʵ: ls /data/local/tmp/xts_test_file.txt
+>>> [SUCCESS] ļѳɹɾ
+[STEP] Teardown
+
+</div>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>7</td>
+            <td>testShowCurrentUser.py</td>
+            <td class="pass">PASS</td>
+            <td>0.22s</td>
+            <td>
+                <button onclick="toggleLog('log_6')">查看日志</button>
+                <div id="log_6" class="log-box">[STEP] Setup
+[STEP] Process
+[DEVICE:device1] ִʵ: id
+[INFO] id command output: uid=0(root) gid=0(root) groups=0(root),1006(file_manager),1007(log),2000(shell),3009(readproc) context=u:r:su:s0
+>>> [SUCCESS] Ȩ޼ͨǰΪ Root ԱȨޡ
+[STEP] Teardown
+
+</div>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>8</td>
+            <td>testShowDateCommand.py</td>
+            <td class="pass">PASS</td>
+            <td>1.33s</td>
+            <td>
+                <button onclick="toggleLog('log_7')">查看日志</button>
+                <div id="log_7" class="log-box">[STEP] Setup
+[STEP] Process
+
+>>> [PC] Եǰʱ: 2025-11-27 18:41:01
+>>> [PC] ׼͵ʱ: 112718412025.01
+[DEVICE:device1] ִʵ: date 112718412025.01
+[DEVICE:device1] ִʵ: date
+>>> [Device] ӵǰʱ: Thu Nov 27 18:41:02 CST 2025
+>>> [SUCCESS]  ʱͬɹʱУ׼
+[STEP] Teardown
+
+</div>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>9</td>
+            <td>testSimpleShellLs.py</td>
+            <td class="pass">PASS</td>
+            <td>0.22s</td>
+            <td>
+                <button onclick="toggleLog('log_8')">查看日志</button>
+                <div id="log_8" class="log-box">[STEP] Setup
+[STEP] Process
+[DEVICE:device1] ִʵ: ls /
+[INFO] Rootfs dirs: bin
+chip_ckm
+chip_prod
+chipset
+config
+data
+dev
+eng_chipset
+eng_system
+etc
+init
+lib
+lost+found
+mnt
+module_update
+proc
+storage
+sys
+sys_prod
+system
+tmp
+updater
+vendor
+>>> [CHECK]  ķ 'system' ڡ
+>>> [CHECK]  ķ 'vendor' ڡ
+>>> [CHECK]  ķ 'etc' ڡ
+>>> [CHECK]  ķ 'bin' ڡ
+>>> [CHECK]  ķ 'proc' ڡ
+>>> [SUCCESS] ļϵͳ OpenHarmony ׼ܹ
+[STEP] Teardown
+
+</div>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>10</td>
+            <td>testSystemInitDirNotEmpty.py</td>
+            <td class="pass">PASS</td>
+            <td>0.21s</td>
+            <td>
+                <button onclick="toggleLog('log_9')">查看日志</button>
+                <div id="log_9" class="log-box">[STEP] Setup
+[STEP] Process
+[DEVICE:device1] ִʵ: ls /system/etc/init
+[INFO] ls /system/etc/init output: access_token.cfg
+accessibility.cfg
+accountmgr.cfg
+app_domain_verify_agent.cfg
+app_fwk_update_service.cfg
+appspawn.cfg
+asset_service.cfg
+audio_policy.cfg
+audio_server.cfg
+av_codec_service.cfg
+avsession_service.cfg
+backup.cfg
+bgtaskmgr_service.cfg
+bluetooth_service.cfg
+cadaemon.cfg
+camera_service.cfg
+cast_engine_service.cfg
+cert_manager_service.cfg
+check_module_update.cfg
+cjappspawn.cfg
+compiler_service.cfg
+concurrent_task_service.cfg
+console.cfg
+cups_service.cfg
+daudio.cfg
+dcamera.cfg
+devattest_service.cfg
+device_manager.cfg
+device_usage_statistics_service.cfg
+deviceauth_service.cfg
+deviceinfoservice.cfg
+deviceprofile.cfg
+dhardware.cfg
+dinput.cfg
+distributed_data.cfg
+distributedbms.cfg
+distributedfile.cfg
+distributedsched.cfg
+dlp_permission_service.cfg
+downloadservice.cfg
+drm_service.cfg
+dscreen.cfg
+dslm_service.cfg
+edm.cfg
+el5_filekey_manager.cfg
+faultloggerd.cfg
+file_access_service.cfg
+foundation.cfg
+graphic.cfg
+hdcd.cfg
+hdf_ext_devmgr.cfg
+hidumper_service.cfg
+hilogd.cfg
+hiperf.cfg
+hiprofiler_daemon.cfg
+hiprofiler_plugins.cfg
+hiprofilerd.cfg
+hitrace.cfg
+hiview.cfg
+huks_service.cfg
+i18n_service.cfg
+init.reboot.cfg
+inputmethodservice.cfg
+installs.cfg
+intell_voice_service.cfg
+key_enable.cfg
+local_code_sign.cfg
+locationsa.cfg
+mdnsmanager.cfg
+media_monitor.cfg
+media_service.cfg
+memmgrservice.cfg
+mmi_uinput.rc
+module_update_sa.cfg
+msdp_musl.cfg
+multimodalinput.cfg
+nativespawn.cfg
+netmanager_base.cfg
+netsysnative.cfg
+oaidservice.cfg
+param_watcher.cfg
+pasteboardservice.cfg
+pinauth_sa_profile.cfg
+powermgr.cfg
+printservice.cfg
+privacy.cfg
+pulseaudio.cfg
+quick_fix.cfg
+resource_schedule_executor.cfg
+resource_schedule_service.cfg
+samgr_standard.cfg
+sandbox_manager_service.cfg
+scanservice.cfg
+scanservice.rc
+screenlock.cfg
+security_collector.cfg
+security_component_service.cfg
+security_guard.cfg
+sensors_musl.cfg
+sharing_service.cfg
+softbus_server_musl.cfg
+srms.cfg
+storage_daemon.cfg
+storage_manager.cfg
+sys_installer_sa.cfg
+teecd.cfg
+telephony.cfg
+testserver.cfg
+timeservice.cfg
+tlogcat.cfg
+token_sync.cfg
+ubsan.cfg
+ueventd.cfg
+ui_service.cfg
+updater_normal.cfg
+updater_sa.cfg
+usb_service.cfg
+useriam.cfg
+wallpaperservice.cfg
+watchdog.cfg
+wifi_hal_service.cfg
+wifi_standard.cfg
+[STEP] Teardown
+
+</div>
+            </td>
+        </tr>
+        
+        </tbody>
+    </table>
+    </body></html>
+    
