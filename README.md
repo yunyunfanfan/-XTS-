@@ -18,7 +18,8 @@
 | `xts_batch_runner.py` | 面向官方 xdevice 的批量执行脚本，支持多计划、Junit 解析以及 JSON/Markdown 汇总。 |
 | `XTS_Report.html` | `run_all.py` 样例输出，展示单次批量执行的通过率、耗时及逐脚本日志。 |
 | `ENVIRONMENT.md` | 环境依赖说明，涵盖 OS、Python、HDC、xdevice、环境变量及快速验证步骤。 |
-| `requirements.txt` | 声明项目仅依赖 Python 3.10+ 标准库，便于快速部署。 |
+| `requirements.txt` | Python 依赖清单，包含 `setuptools==50.0.0`，需通过 `pip install -r requirements.txt` 安装。 |
+| `xts_测试用例.docx` / `xts_测试用例.pdf` | 完整的测试用例设计文档，详细记录用例设计思路、子系统分析、执行结果与测试结论。 |
 | `hm_xts_复杂用例*.docx` | 复杂用例设计文档，记录子系统分析、设计路径与执行结论。 |
 | `错误报告.md` | 对 PCS Python 用例缺陷的扫描与复现说明，已整理成可用于 issue 的正式报告。 |
 
@@ -28,9 +29,10 @@
 
 1. **操作系统**：Windows 10/11 x64（或任意可安装 Python 3.10+ 与 HDC 的桌面系统）。
 2. **Python**：3.10 及以上版本，确保 `python`、`pip` 在 `PATH` 中。
-3. **HDC**：随 OpenHarmony SDK/DevEco 安装，`hdc list targets` 需能识别设备。
-4. **xdevice**：同步官方 `test/developtools/xdevice`，确保 `python path\to\xdevice.py list` 可执行。
-5. 详细步骤与常见问题见 `ENVIRONMENT.md`；`requirements.txt` 表明无需额外三方包。
+3. **安装依赖**：执行 `pip install -r requirements.txt` 安装所需包（当前包含 `setuptools==50.0.0`）。
+4. **HDC**：随 OpenHarmony SDK/DevEco 安装，`hdc list targets` 需能识别设备。
+5. **xdevice**：同步官方 `test/developtools/xdevice`，确保 `python path\to\xdevice.py list` 可执行。
+6. 详细步骤与常见问题见 `ENVIRONMENT.md`。
 
 ---
 
@@ -62,7 +64,7 @@
 | --- | --- |
 | 理解并说明 XTS 框架结构与运行机制 | `ENVIRONMENT.md` + `devicetest/core/test_case.py` 详细描述 HDC 设备交互、测试基类及执行链路；README 的“环境准备”和“快速上手”章节进一步解释流程。 |
 | 编写 ≥5 个有效 XTS 测试用例 | 仓库包含 11 个 `test*.py` 用例，覆盖系统目录、init 配置、Bundle 管理、权限校验等多个子系统，可针对单系统或多系统执行。 |
-| 输出设计/执行分析文档 | `hm_xts_复杂用例*.docx` 记录设计思路与执行结论；`XTS_Report.html` 提供可视化结果；`错误报告.md` 以正式格式列出缺陷及修复优先级。 |
+| 输出设计/执行分析文档 | `xts_测试用例.docx`/`xts_测试用例.pdf` 提供完整的测试用例设计文档，详细记录设计思路、子系统分析与执行结论；`hm_xts_复杂用例*.docx` 补充复杂场景设计；`XTS_Report.html` 提供可视化结果；`错误报告.md` 以正式格式列出缺陷及修复优先级。 |
 | 自动化脚本、批量执行与报告 | `run_all.py` 与 `xts_batch_runner.py` 支持自动化执行、日志捕获、HTML/JSON/Markdown 报告，并可对接 xdevice 与官方 XTS 计划。 |
 | 发现并复现场内 XTS 用例缺陷 | `错误报告.md` 针对 PCS 用例列出 12 项问题、复现步骤与修复建议，并已同步至 [Issue 22871](https://gitcode.com/openharmony/xts_acts/issues/22871)。 |
 | XTS 与 Google GTest/Android CTS 机制对比（挑战项） | 对比分析收录在 `hm_xts_复杂用例.docx`，强调 XTS 在分布式与系统服务场景的优势。 |
@@ -81,9 +83,10 @@
 ## 6. 贡献方式
 
 1. Fork [主仓库](https://github.com/yunyunfanfan/-XTS-.git)，创建特性分支。
-2. 根据 `ENVIRONMENT.md` 安装/校验依赖，编写或更新测试脚本。
+2. 根据 `ENVIRONMENT.md` 安装/校验依赖（包括执行 `pip install -r requirements.txt`），编写或更新测试脚本。
 3. 运行 `run_all.py` 或 `xts_batch_runner.py` 验证结果，附上 `XTS_Report.html` 或 Markdown 报告。
-4. 在 PR 或 issue 中引用 [Issue 22871](https://gitcode.com/openharmony/xts_acts/issues/22871) 以便协调修复。
+4. 参考 `xts_测试用例.docx`/`xts_测试用例.pdf` 的格式更新设计文档。
+5. 在 PR 或 issue 中引用 [Issue 22871](https://gitcode.com/openharmony/xts_acts/issues/22871) 以便协调修复。
 
 欢迎提交新的系统能力用例、自动化工具或框架改进，一起提升 OpenHarmony XTS 的测试覆盖率和稳定性。
 
