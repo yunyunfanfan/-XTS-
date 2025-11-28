@@ -20,7 +20,6 @@
 | `ENVIRONMENT.md` | 环境依赖说明，涵盖 OS、Python、HDC、xdevice、环境变量及快速验证步骤。 |
 | `requirements.txt` | Python 依赖清单，包含 `setuptools==50.0.0`，需通过 `pip install -r requirements.txt` 安装。 |
 | `xts_测试用例.docx` / `xts_测试用例.pdf` | 完整的测试用例设计文档，详细记录用例设计思路、子系统分析、执行结果与测试结论。 |
-| `hm_xts_复杂用例*.docx` | 复杂用例设计文档，记录子系统分析、设计路径与执行结论。 |
 | `错误报告.md` | 对 PCS Python 用例缺陷的扫描与复现说明，已整理成可用于 issue 的正式报告。 |
 
 ---
