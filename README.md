@@ -63,10 +63,10 @@
 | --- | --- |
 | 理解并说明 XTS 框架结构与运行机制 | `ENVIRONMENT.md` + `devicetest/core/test_case.py` 详细描述 HDC 设备交互、测试基类及执行链路；README 的“环境准备”和“快速上手”章节进一步解释流程。 |
 | 编写 ≥5 个有效 XTS 测试用例 | 仓库包含 11 个 `test*.py` 用例，覆盖系统目录、init 配置、Bundle 管理、权限校验等多个子系统，可针对单系统或多系统执行。 |
-| 输出设计/执行分析文档 | `xts_测试用例.docx`/`xts_测试用例.pdf` 提供完整的测试用例设计文档，详细记录设计思路、子系统分析与执行结论；`hm_xts_复杂用例*.docx` 补充复杂场景设计；`XTS_Report.html` 提供可视化结果；`错误报告.md` 以正式格式列出缺陷及修复优先级。 |
+| 输出设计/执行分析文档 | `xts_测试用例.docx`/`xts_测试用例.pdf` 提供完整的测试用例设计文档，详细记录设计思路、子系统分析、复杂场景设计、执行结果与测试结论；`XTS_Report.html` 提供可视化结果；`错误报告.md` 以正式格式列出缺陷及修复优先级。 |
 | 自动化脚本、批量执行与报告 | `run_all.py` 与 `xts_batch_runner.py` 支持自动化执行、日志捕获、HTML/JSON/Markdown 报告，并可对接 xdevice 与官方 XTS 计划。 |
 | 发现并复现场内 XTS 用例缺陷 | `错误报告.md` 针对 PCS 用例列出 12 项问题、复现步骤与修复建议，并已同步至 [Issue 22871](https://gitcode.com/openharmony/xts_acts/issues/22871)。 |
-| XTS 与 Google GTest/Android CTS 机制对比（挑战项） | 对比分析收录在 `hm_xts_复杂用例.docx`，强调 XTS 在分布式与系统服务场景的优势。 |
+| XTS 与 Google GTest/Android CTS 机制对比（挑战项） | 对比分析收录在 `xts_测试用例.docx`/`xts_测试用例.pdf`，详细阐述 XTS 在分布式与系统服务场景的优势。 |
 | 代码开源、可运行 | 全部脚本和文档已托管在 GitHub，满足提交要求并便于社区复现。 |
 
 ---
